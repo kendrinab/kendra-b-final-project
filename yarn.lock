@@ -725,6 +725,11 @@ express@^4.17.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
+faker@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-5.1.0.tgz#e10fa1dec4502551aee0eb771617a7e7b94692e8"
+  integrity sha512-RrWKFSSA/aNLP0g3o2WW1Zez7/MnMr7xkiZmoCfAGZmdkDQZ6l2KtuXHN5XjdvpRjDl8+3vf+Rrtl06Z352+Mw==
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -1524,6 +1529,11 @@ node-addon-api@^3.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.2.tgz#04bc7b83fd845ba785bb6eae25bc857e1ef75681"
   integrity sha512-+D4s2HCnxPd5PjjI0STKwncjXTUKKqm74MDMz9OPXavjsGmjkvwgLtA5yoxJUdmpj52+2u+RrXgPipahKczMKg==
 
+node-bin-setup@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.0.6.tgz#4b5c9bb937ece702d7069b36ca78af4684677528"
+  integrity sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q==
+
 node-pre-gyp@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.15.0.tgz#c2fc383276b74c7ffa842925241553e8b40f1087"
@@ -1539,6 +1549,13 @@ node-pre-gyp@0.15.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4.4.2"
+
+node@^15.3.0:
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-15.3.0.tgz#1b85e5e514c64fa98070919fa4462e5129dc4779"
+  integrity sha512-sLyjt+s8FhQfMTOdD4gWwTQcMJJb6yWqvHqon0rBQjOobWYvXcBqsUikV23iKEd0zB24x0uDe14l4E24UjfNcQ==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 nodemon@^2.0.6:
   version "2.0.6"
