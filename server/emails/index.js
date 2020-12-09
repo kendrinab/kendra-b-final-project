@@ -17,7 +17,7 @@ sgMail / setApiKey(SENGRID_API_KEY);
       to: email,
       from: `${process.env.FROM_EMAIL}`,
       subject: 'Oh no! We are sad to to see you go...',
-      text: `Bye ${name} .. We hope to see you again!`
+      text: `Bye ${name}.. We hope to see you again!`
     });
   });
 
