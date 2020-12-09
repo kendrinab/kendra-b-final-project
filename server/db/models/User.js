@@ -58,8 +58,8 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-userSchema.virtual('blogs', {
-  ref: 'Blog',
+userSchema.virtual('posts', {
+  ref: 'Post',
   localField: '_id',
   foreignField: 'owner'
 });
