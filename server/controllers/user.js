@@ -92,6 +92,19 @@ exports.passwordRedirect = async (req, res) => {
   }
 };
 
+exports.updatePassword = async (req, res) => {
+  try {
+    req.user.password = req.body.password;
+    await req.user.save();
+    res.clearCookie('jwt');
+    res
+      .status(200)
+      .json({ message: 'Your password has successfully been updated!' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 // ***********************************************//
 // GET A CURRENT USER
 // ***********************************************//
