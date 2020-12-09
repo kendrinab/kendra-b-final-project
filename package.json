@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
+    "cloudinary": "^1.23.0",
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
