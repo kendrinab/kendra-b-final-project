@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
@@ -10,10 +13,12 @@
     "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
+    "faker": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.5",
+    "node": "^15.3.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react": "^17.0.1",
@@ -37,6 +42,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && yarn run start",
+    "db:reset": "node/server/db/seeds",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "cd client && yarn && yarn run build",
     "prettify": "prettier '*/**/*.js' '*/**/*.jsx' '*/**/*.html' '*/**/*.css' --write"
