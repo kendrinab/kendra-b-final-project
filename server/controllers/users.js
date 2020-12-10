@@ -1,4 +1,4 @@
-const User = require('../db/models/User'),
+const User = require('../db/models/user'),
   cloudinary = require('cloudinary').v2,
   {
     sendWelcomeEmail,
@@ -28,7 +28,9 @@ exports.createUser = async (req, res) => {
     });
     res.status(201).json(user);
   } catch (e) {
-    res.status(400).json({ error: e.toString() });
+    res.status(400).json({
+      error: e.toString()
+    });
   }
 };
 
@@ -48,7 +50,9 @@ exports.loginUser = async (req, res) => {
     });
     res.json(user);
   } catch (e) {
-    res.status(400).json({ error: e.toString() });
+    res.status(400).json({
+      error: e.toString()
+    });
   }
 };
 
@@ -62,17 +66,28 @@ exports.loginUser = async (req, res) => {
 exports.requestPasswordReset = async (req, res) => {
   try {
     const { email } = req.query;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({
+      email
+    });
     if (!user) throw new Error('Uh Oh! User Not Found');
     const token = jwt.sign(
-      { _id: user._id.toString(), name: user.name },
+      {
+        _id: user._id.toString(),
+        name: user.name
+      },
       process.env.JWT_SECRET,
-      { expiresIn: '10m' }
+      {
+        expiresIn: '10m'
+      }
     );
     forgotPasswordEmail(email, token);
-    res.json({ message: 'Password Reset Email Has been Sent!' });
+    res.json({
+      message: 'Password Reset Email Has been Sent!'
+    });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 exports.passwordRedirect = async (req, res) => {
@@ -88,7 +103,9 @@ exports.passwordRedirect = async (req, res) => {
     });
     res.redirect(process.env.URL + '/update=password');
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 
@@ -97,11 +114,13 @@ exports.updatePassword = async (req, res) => {
     req.user.password = req.body.password;
     await req.user.save();
     res.clearCookie('jwt');
-    res
-      .status(200)
-      .json({ message: 'Your password has successfully been updated!' });
+    res.status(200).json({
+      message: 'Your password has successfully been updated!'
+    });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 
@@ -124,13 +143,17 @@ exports.updateCurrentUser = async (req, res) => {
     allowedUpdates.includes(update)
   );
   if (!isValidOperation)
-    return res.status(400).json({ message: 'Invalid updates' });
+    return res.status(400).json({
+      message: 'Invalid updates'
+    });
   try {
     updates.forEach((update) => (req.user[update] = req.body[update]));
     await req.user.save();
     res.json(req.user);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 
@@ -145,9 +168,13 @@ exports.logoutUser = async (req, res) => {
     });
     await req.user.save();
     res.clearCookie('jwt');
-    res.json({ message: 'You have successfully logged out!' });
+    res.json({
+      message: 'You have successfully logged out!'
+    });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 
@@ -160,9 +187,13 @@ exports.logoutAllDevices = async (req, res) => {
     req.user.tokens = [];
     await req.user.save();
     res.clearCookie('jwt');
-    res.json({ message: 'You have successfully logged out from all devices!' });
+    res.json({
+      message: 'You have successfully logged out from all devices!'
+    });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({
+      error: error.message
+    });
   }
 };
 
@@ -175,12 +206,30 @@ exports.deleteUser = async (req, res) => {
     await req.user.remove();
     sendCancellationEmail(req.user.email, req.user.name);
     res.clearCookie('jwt');
-    res.json({ message: 'This user has successfully been deleted' });
+    res.json({
+      message: 'This user has successfully been deleted'
+    });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({
+      error: error.message
+    });
   }
 };
 
 // ***********************************************//
 // UPLOAD AN AVATAR
 // ***********************************************//
+exports.uploadAvatar = async (req, res) => {
+  try {
+    const response = await cloudinary.uploader.upload(
+      req.files.avatar.tempFilePath
+    );
+    req.user.avatar = response.secure_url;
+    await req.user.save();
+    res.json(response);
+  } catch (error) {
+    res.status(400).json({
+      error: error.message
+    });
+  }
+};

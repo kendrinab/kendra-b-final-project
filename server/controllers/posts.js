@@ -1,5 +1,6 @@
-const Post = require('../db/models/Post'),
-  mongoose = require('mongoose');
+user = require('./users');
+const Post = require('../db/models/post');
+mongoose = require('mongoose');
 // ***********************************************//
 // CREATE A POST
 // ***********************************************//

@@ -9,7 +9,7 @@ sgMail.setApiKey(SENGRID_API_KEY);
     from: `${process.env.FROM_EMAIL}`,
     subject:
       'Thank you for signing up! Please check email for your confirmation.',
-    text: `Hi ${name} ! Welcome to your Blog account.`
+    text: `Hi ${name}! Welcome to your Blog account.`
   });
 }),
   (exports.sendCancellationEmail = (email, name) => {
