@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       validate(value) {
         if (!validator.isEmail(value)) {
-          throw new Error('Uh Oh! Email is Invalid');
+          throw new Error('Uh Oh! Email is Invalid.');
         }
       }
     },
@@ -61,7 +61,7 @@ const userSchema = new mongoose.Schema(
 userSchema.virtual('posts', {
   ref: 'Post',
   localField: '_id',
-  foreignField: 'owner'
+  foreignField: 'user'
 });
 
 userSchema.methods.toJSON = function () {

@@ -1,5 +1,6 @@
-const Post = require('../db/models/Post'),
-  mongoose = require('mongoose');
+user = require('./users');
+const Post = require('../db/models/post');
+mongoose = require('mongoose');
 // ***********************************************//
 // CREATE A POST
 // ***********************************************//
@@ -83,10 +84,10 @@ exports.deletePost = async (req, res) => {
     });
     if (!post)
       return res.status(404).json({
-        message: 'Uh Oh! post not found'
+        message: 'Uh Oh! Post not found'
       });
     res.status(200).json({
-      message: 'post has been deleted'
+      message: 'This post has been deleted'
     });
   } catch (error) {
     res.status(400).json({

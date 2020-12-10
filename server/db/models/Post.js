@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema({
     trim: true
   },
   text: {
-    String,
+    type: String,
     required: true
   },
   owner: {

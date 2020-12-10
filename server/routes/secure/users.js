@@ -15,6 +15,6 @@ router.post('/logout', logoutUser);
 router.post('/logoutall', logoutAllDevices);
 router.delete('/me', deleteUser);
 router.post('/avatar', uploadAvatar);
-router.put('/password', updatePassword);
+// router.put('/password', updatePassword);
 
 module.exports = router;

@@ -1,6 +1,3 @@
-const fileUpload = require('express-fileupload');
-const passport = require('passport');
-
 require('./db/config/index');
 const express = require('express'),
   app = express(),
