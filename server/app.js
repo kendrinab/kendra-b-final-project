@@ -29,6 +29,16 @@ app.use(
     tempFileDir: '/tmp/images'
   })
 );
+//ALL AUTHENTICATED ROUTES
+
+app.use('/api/posts', postRouter);
+app.use('/api/users', userRouter);
+app.use(
+  '/api/*',
+  passport.authenticate('jwt', {
+    session: false
+  })
+);
 
 // Handle React routing, return all requests to React app
 if (process.env.NODE_ENV === 'production') {
@@ -36,12 +46,4 @@ if (process.env.NODE_ENV === 'production') {
     response.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
 }
-
-//ALL AUTHENTICATED ROUTES
-
-app.use('/api/posts', postRouter);
-app.use('/api/users', userRouter);
-
-app.use('/api/*', passport.authenticate('jwt', { session: false }));
-
 module.exports = app;

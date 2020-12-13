@@ -1,25 +1,30 @@
 const mongoose = require('mongoose');
 moment = require('moment');
 
-const postSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-    trim: true
+const postSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    image: {
+      type: String,
+      trim: true
+    },
+    text: {
+      type: String,
+      required: true
+    },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    }
   },
-  image: {
-    type: String,
-    trim: true
-  },
-  text: {
-    type: String,
-    required: true
-  },
-  owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+  {
+    timestamps: true
   }
-});
+);
 
 postSchema.methods.toJSON = function () {
   const post = this;
