@@ -9,7 +9,6 @@ const Post = require('../models/post'),
 
 const dbReset = async () => {
   const collections = Object.keys(mongoose.connection.collections);
-  console.log(collections);
   for (const collectionName of collections) {
     const collection = mongoose.connection.collections[collectionName];
     await collection.deleteMany();
@@ -21,12 +20,11 @@ const dbReset = async () => {
   // await Post.countDocuments({}, function (err, count) {
   //   console.log('Number of posts:', count);
   // });
-
   const userIdArray = [];
 
   /* ==============
-      USER
-  ===============*/
+          USER
+      ===============*/
   for (let i = 0; i < 100; i++) {
     const me = new User({
       name: `${faker.name.firstName()} ${faker.name.lastName()}`,
@@ -37,8 +35,14 @@ const dbReset = async () => {
     await me.generateAuthToken();
     userIdArray.push(me._id);
   }
-  await User.countDocuments({}, function (err, count) {
-    console.log('Number of users:', count);
-  });
+  // for (let i = 0; i < 100; i++) {
+  //   const me = new Post({
+  //     description: faker.lorem.paragraph(),
+  //     owner: userIdArray[Math.floor(Math.random() * userIdArray.length)],
+  //     avatar: faker.image.avatar()
+  //   });
+  //   await User.countDocuments({}, function (err, count) {
+  //     console.log('Number of users:', count);
+  //   });
 };
 dbReset();

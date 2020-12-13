@@ -4,21 +4,23 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import Footer from './components/Footer';
-import Navbar from './components/Nav';
+// import Footer from './components/Footer';
+import Nav from './components/Nav';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
     <AppContextProvider>
       <BrowserRouter>
-        <Navbar />
+        <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="blog" component={Blog} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/blog" component={Blog} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </AppContextProvider>
   );
