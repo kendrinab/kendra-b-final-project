@@ -3,22 +3,23 @@ import { AppContextProvider } from './context/AppContext';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import Blog from './pages/Blog';
+// import Blog from './pages/Blog';
 // import Footer from './components/Footer';
-import Nav from './components/Nav';
+import Navigation from './components/Navigation';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
     <AppContextProvider>
       <BrowserRouter>
-        <Nav />
+        <Navigation />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/blog" component={Blog} />
+          {/* <Route exact path="/blog" component={Blog} /> */}
         </Switch>
         {/* <Footer /> */}
       </BrowserRouter>

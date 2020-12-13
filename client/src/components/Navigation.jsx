@@ -1,7 +1,7 @@
 import React from 'react';
-import { FormControl, Button, Form, Navbar } from 'react-bootstrap';
+import { FormControl, Button, Form, Navbar, Nav } from 'react-bootstrap';
 
-const Nav = () => {
+const Navigation = () => {
   return (
     <div>
       {' '}
@@ -21,4 +21,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navigation;
