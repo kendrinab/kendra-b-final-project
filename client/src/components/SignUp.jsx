@@ -25,10 +25,10 @@ const SignUp = ({ history }) => {
   };
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">WynTodo!</h1>
+      <h1 className="mb-4">Happy Blogging!</h1>
       <Form style={{ width: 300 }} onSubmit={handleSignUp}>
         <Form.Group>
-          <Form.Label htmlFor="fullName">Full Name</Form.Label>
+          <Form.Label htmlFor="fullName">Name (First & Last)</Form.Label>
           <Form.Control
             id="fullName"
             type="text"

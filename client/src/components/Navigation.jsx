@@ -1,16 +1,16 @@
 import React from 'react';
-import { FormControl, Button, Form, Navbar } from 'react-bootstrap';
+import { FormControl, Button, Form, Navbar, Nav } from 'react-bootstrap';
 
-const Nav = () => {
+const Navigation = () => {
   return (
     <div>
       {' '}
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand href="#home">MTL</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/blog">Posts</Nav.Link>
+          <Nav.Link href="#">About Us</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -21,4 +21,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navigation;
