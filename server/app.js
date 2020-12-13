@@ -43,6 +43,5 @@ app.use('/api/posts', postRouter);
 app.use('/api/users', userRouter);
 
 app.use('/api/*', passport.authenticate('jwt', { session: false }));
-app.use;
 
 module.exports = app;
