@@ -1,5 +1,42 @@
+/*===================
+ALL
+====================*/
 .fullscreen {
   height: 100vh;
+}
+
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3,
+h6 {
+  font-size: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*===================
+NAVIGATION
+====================*/
+div .bg-dark {
+  background-color: black;
+}
+
+.btn-outline-info {
+  color: white;
+  border-color: white;
 }
 
 /*===================
@@ -10,29 +47,33 @@ BLOG slideshow
   height: 400px;
   width: 800px;
   margin: auto;
-  padding-top: 60px;
+  padding-bottom: 20px;
 
 } */
 
-/* .zoom-wrapper {
-height: 400px;
-width: 800px;
-justify-content: space-between;
-} */
+.zoom-wrapper {
+  height: 400px;
+  width: 800px;
+  justify-content: space-between;
+}
+
 /*===================
 BLOG posts
 ====================*/
 
-/* .post-title {
+.post-title {
   margin: auto;
   justify-content: space-around;
-} */
-/* .the-latest {
+  padding: 10px;
+}
+
+.the-latest {
   margin: auto;
   justify-content: space-around;
   padding-top: 10px;
   padding-bottom: 30px;
 }
+
 .blog-title {
   margin: auto;
   height: auto;
@@ -50,4 +91,4 @@ BLOG posts
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 42px;
   grid-row-gap: 3px;
-  } */
+}

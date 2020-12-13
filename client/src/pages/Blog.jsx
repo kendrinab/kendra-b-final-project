@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import 'react-slideshow-image/dist/styles.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BlogSlideshow from '../pages/BlogSlideshow';
-// import { posts } from '../../../server/routes/secure/posts.js';
 
 const Blog = () => {
   const { id } = useParams();
@@ -22,7 +20,6 @@ const Blog = () => {
 
   return (
     <div className="blog-title">
-      <h3>Blog</h3>
       <div>
         <section>
           <BlogSlideshow />
