@@ -3,7 +3,7 @@ import { AppContextProvider } from './context/AppContext';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-// import Blog from './pages/Blog';
+import Blog from './pages/Blog';
 // import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
@@ -19,7 +19,7 @@ function App() {
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          {/* <Route exact path="/blog" component={Blog} /> */}
+          <Route exact path="/blog" component={Blog} />
         </Switch>
         {/* <Footer /> */}
       </BrowserRouter>

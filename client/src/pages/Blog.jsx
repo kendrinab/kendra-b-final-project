@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import 'react-slideshow-image/dist/styles.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-// import BlogSlideshow from '../pages/BlogSlideshow';
+import BlogSlideshow from '../pages/BlogSlideshow';
 // import { posts } from '../../../server/routes/secure/posts.js';
 
 const Blog = () => {
@@ -11,7 +11,7 @@ const Blog = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/posts/`)
+      .get(`/api/posts`)
       .then((response) => {
         setPosts(response.data);
       })
@@ -24,10 +24,12 @@ const Blog = () => {
     <div className="blog-title">
       <h3>Blog</h3>
       <div>
-        <section>{/* <BlogSlideshow /> */}</section>
+        <section>
+          <BlogSlideshow />
+        </section>
       </div>
       <section className="the-latest">
-        <h6>News Flash</h6>
+        <h6>Where's the Best Place to Travel to in December</h6>
       </section>
       <div class="parent">
         <div>

@@ -1,3 +1,53 @@
 .fullscreen {
   height: 100vh;
 }
+
+/*===================
+BLOG slideshow
+====================*/
+
+/* .react-slideshow-container {
+  height: 400px;
+  width: 800px;
+  margin: auto;
+  padding-top: 60px;
+
+} */
+
+/* .zoom-wrapper {
+height: 400px;
+width: 800px;
+justify-content: space-between;
+} */
+/*===================
+BLOG posts
+====================*/
+
+/* .post-title {
+  margin: auto;
+  justify-content: space-around;
+} */
+/* .the-latest {
+  margin: auto;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.blog-title {
+  margin: auto;
+  height: auto;
+  width: auto;
+  justify-content: space-around;
+  padding: 60px;
+  padding-top: 0%;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 42px;
+  grid-row-gap: 3px;
+  } */
