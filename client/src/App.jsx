@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import Footer from './components/Footer';
+import Navbar from './components/Nav';
+import Login from './components/Login';
 
-const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
-
+function App() {
   return (
     <AppContextProvider>
-      <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
-        <ContextDemo />
-        <h3>{serverMessage}</h3>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="blog" component={Blog} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </AppContextProvider>
   );
-};
+}
 
 export default App;
