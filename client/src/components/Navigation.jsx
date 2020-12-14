@@ -1,22 +1,17 @@
 import React from 'react';
-// import { useLocation, useHistory } from 'react-router-dom';
-import { FormControl, Button, Form, Navbar, Nav } from 'react-bootstrap';
-// import { AppContext } from '../context/AppContext';
+import { Form, FormControl, Button, Navbar, Nav } from 'react-bootstrap';
+import '../images/Logo_7a6fea93.svg';
 
 const Navigation = () => {
-  // const [setSearch] = useContext(AppContext);
-  // const history = useHistory();
-  // const location = useLocation();
-  // const handleSearch = (e) => {
-  //   if (location.pathname !== '/posts') {
-  //     history.push('/posts');
-  //   }
-  //   setSearch(e.target.value);
-  // }
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="/home">MTL</Navbar.Brand>
+      <Navbar bg="light" variant="light">
+        <Nav.Link href="/">
+          <img
+            src={require('../images/Logo.7a6fea93.svg')}
+            className="logo"
+          ></img>
+        </Nav.Link>
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/blog">Posts</Nav.Link>
@@ -34,5 +29,4 @@ const Navigation = () => {
     </div>
   );
 };
-
 export default Navigation;

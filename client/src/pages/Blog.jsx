@@ -26,7 +26,7 @@ const Blog = () => {
         </section>
       </div>
       <section className="the-latest">
-        <h6>Where's the Best Place to Travel to in December</h6>
+        <h6>News Flash</h6>
       </section>
       <div class="parent">
         <div>

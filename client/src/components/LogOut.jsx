@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Dropdown } from 'react-bootstrap';
+import Dropdown from '../components/Dropdown';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 const Logout = () => {
