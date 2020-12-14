@@ -1,7 +1,18 @@
 import React from 'react';
+// import { useLocation, useHistory } from 'react-router-dom';
 import { FormControl, Button, Form, Navbar, Nav } from 'react-bootstrap';
+// import { AppContext } from '../context/AppContext';
 
 const Navigation = () => {
+  // const [setSearch] = useContext(AppContext);
+  // const history = useHistory();
+  // const location = useLocation();
+  // const handleSearch = (e) => {
+  //   if (location.pathname !== '/posts') {
+  //     history.push('/posts');
+  //   }
+  //   setSearch(e.target.value);
+  // }
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -12,7 +23,11 @@ const Navigation = () => {
           <Nav.Link href="#">About Us</Nav.Link>
         </Nav>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <FormControl
+            type="text"
+            placeholder="Search for a post!"
+            className="mr-sm-2"
+          />
           <Button variant="outline-info">Search</Button>
         </Form>
       </Navbar>
