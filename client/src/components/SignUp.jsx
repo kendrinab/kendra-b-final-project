@@ -32,9 +32,10 @@ const SignUp = ({ history }) => {
           <Form.Control
             id="fullName"
             type="text"
-            placeholder="Full Name"
+            placeholder="Name"
             name="name"
             onChange={handleChange}
+            required
           />
         </Form.Group>
         <Form.Group>
@@ -42,9 +43,10 @@ const SignUp = ({ history }) => {
           <Form.Control
             id="email"
             type="email"
-            placeholder="Email Address"
+            placeholder="Email"
             name="email"
             onChange={handleChange}
+            required
           />
         </Form.Group>
         <Form.Group>
@@ -55,13 +57,16 @@ const SignUp = ({ history }) => {
             placeholder="Password"
             name="password"
             onChange={handleChange}
+            required
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Sign Up!</Button>
+          <link>
+            <Button type="submit">Sign Up!</Button>
+          </link>
         </Form.Group>
       </Form>
-      <Link className="mt-4" to="/login">
+      <Link className="mt-4" to="/signup">
         Already have a blogging account? Login Here!
       </Link>
     </Container>

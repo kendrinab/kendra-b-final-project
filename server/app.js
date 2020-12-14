@@ -13,7 +13,7 @@ path = require('path');
 app.use(express.json());
 
 // Unauthenticated routes
-app.use('/api', openRoutes);
+app.use('/api/users', openRoutes);
 
 //Middleware to parse through incoming cookies in the requests.
 app.use(cookieParser());
