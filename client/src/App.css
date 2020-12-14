@@ -30,6 +30,11 @@ img {
 /*===================
 NAVIGATION
 ====================*/
+
+#Navbar {
+  background-color: black;
+}
+
 div .bg-dark {
   background-color: black;
 }
@@ -40,17 +45,16 @@ div .bg-dark {
 }
 
 /*===================
+LOGIN 
+====================*/
+.btn-primary {
+  background-color: rgb(248, 141, 0);
+  border-color: rgb(248, 141, 0);
+}
+
+/*===================
 BLOG slideshow
 ====================*/
-
-/* .react-slideshow-container {
-  height: 400px;
-  width: 800px;
-  margin: auto;
-  padding-bottom: 20px;
-
-} */
-
 .zoom-wrapper {
   height: 400px;
   width: 800px;
@@ -60,7 +64,6 @@ BLOG slideshow
 /*===================
 BLOG posts
 ====================*/
-
 .post-title {
   margin: auto;
   justify-content: space-around;

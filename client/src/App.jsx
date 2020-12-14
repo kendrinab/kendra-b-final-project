@@ -1,14 +1,15 @@
 import React from 'react';
 import { AppContextProvider } from './context/AppContext';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-// import Footer from './components/Footer';
 import Navigation from './components/Navigation';
+import Home from './pages/Home';
+
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import PrivateRoute from './components/PrivateRoute';
+import Blog from './pages/Blog';
+// import Footer from './components/Footer';
 
 function App() {
   return (
