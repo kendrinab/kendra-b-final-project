@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Container, Image, Button } from 'react-bootstrap';
-import Navigation from '../components/Navigation';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -69,10 +68,9 @@ const Profile = ({ history: { push } }) => {
   };
   return (
     <>
-      <Navigation />
       <Dropdown />
       <Container className="d-flex justify-content-center align-items-center flex-column">
-        <h1 className="mt-4">Your Profile</h1>
+        <h1 className="mt-4">CLN +ALT Blog Profile Info</h1>
         <div className="mt-4">
           <Image
             src={

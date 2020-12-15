@@ -26,14 +26,14 @@ const Blog = () => {
         </section>
       </div>
       <section className="the-latest">
-        <h6>News Flash</h6>
+        <h1>News Flash</h1>
       </section>
       <div class="parent">
         <div>
           {posts.map((post) => (
             <li key={post._id}>
               <span>
-                <h2 className="post-title">{post.title}</h2>
+                <h4 className="post-title">{post.title}</h4>
               </span>
               <img src={post.image} alt={post.title} />
               {post.text}
@@ -44,7 +44,7 @@ const Blog = () => {
           {posts
             .map((post) => (
               <li key={post._id}>
-                <h2 className="post-title">{post.title}</h2>
+                <h4 className="post-title">{post.title}</h4>
                 <img src={post.image} alt={post.title} />
                 {post.text}
               </li>

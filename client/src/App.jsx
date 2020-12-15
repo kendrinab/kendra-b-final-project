@@ -6,9 +6,10 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Login from './components/Login';
+import Profile from './pages/Profile';
 import SignUp from './components/SignUp';
 import Blog from './pages/Blog';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import DropDown from './components/DropDown';
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/profile" component={Profile} />
           <Route exact path="/blog" component={Blog} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </AppContextProvider>
   );
