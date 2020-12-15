@@ -3,8 +3,6 @@ import { Container, Image, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
-import DropDownBar from '../components/DropDownBar';
-// import PostForm from '../components/PostForm';
 
 const Profile = ({ history: { push } }) => {
   const { currentUser, setCurrentUser, setLoading } = useContext(AppContext);
@@ -69,7 +67,6 @@ const Profile = ({ history: { push } }) => {
   };
   return (
     <>
-      <DropDownBar />
       <Container className="d-flex justify-content-center align-items-center flex-column">
         <h1 className="mt-4">CLN +ALT Blog Profile Info</h1>
         <div className="mt-4">

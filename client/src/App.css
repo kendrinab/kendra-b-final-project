@@ -101,8 +101,15 @@ LOGIN
   border-color: black;
 }
 
-.mt-4 {
+/* .mt-4 {
   color: #000;
+} */
+
+.login-container {
+  background-image: url(./images/sidebackground.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto;
 }
 
 /*===================
@@ -169,6 +176,7 @@ footer {
   background-image: url(./images/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
   width: 100%;
   height: 250px;
   bottom: 0;
@@ -181,7 +189,7 @@ footer .middle {
 }
 
 footer .social-media {
-  border-right: 3px;
+  border-right: 3px solid #b6aa93;
   width: 20%;
 }
 
@@ -193,6 +201,14 @@ footer ul li {
   width: 100%;
   padding: 10px;
   text-align: right;
+}
+
+footer ul {
+  background-color: transparent !important;
+  justify-content: space-between !important;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 footer ul a {

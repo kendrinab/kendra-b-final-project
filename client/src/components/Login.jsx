@@ -27,8 +27,8 @@ const Login = ({ history }) => {
     }
   };
   return (
-    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <div className="login-container">
+    <div className="login-container">
+      <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
         <h1 className="mb-4">Welcome Back, CLN +Blogger!</h1>
         <Form style={{ width: 300 }} onSubmit={handleLogin}>
           <Form.Group>
@@ -58,8 +58,8 @@ const Login = ({ history }) => {
         <Link className="mt-4" to="/signup">
           Ready to Blog? Sign Up Now!
         </Link>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
