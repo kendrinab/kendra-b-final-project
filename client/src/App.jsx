@@ -10,14 +10,14 @@ import Profile from './pages/Profile';
 import SignUp from './components/SignUp';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
-import DropDown from './components/DropDown';
+import DropDownBar from './components/DropDownBar';
 
 function App() {
   return (
     <AppContextProvider>
       <BrowserRouter>
         <Navigation />
-        <DropDown />
+        <DropDownBar />
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/" component={Home} />

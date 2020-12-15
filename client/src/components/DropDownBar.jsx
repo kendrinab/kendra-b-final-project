@@ -3,7 +3,7 @@ import { Nav, Dropdown, Image, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
-const DropDown = () => {
+const DropDownBar = () => {
   const { currentUser } = useContext(AppContext);
   console.log(currentUser);
   return (
@@ -38,4 +38,4 @@ const DropDown = () => {
   );
 };
 
-export default DropDown;
+export default DropDownBar;
