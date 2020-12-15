@@ -12,6 +12,8 @@ import Blog from './pages/Blog';
 import PostForm from './components/PostForm';
 import Footer from './components/Footer';
 import DropDownBar from './components/DropDownBar';
+import UpdatePassword from './components/UpdatePassword';
+import ResetPassword from './components/ResetPassword';
 
 function App() {
   return (
@@ -21,10 +23,12 @@ function App() {
         <DropDownBar />
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
-          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/profile" component={Profile} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/update-password" component={UpdatePassword} />
+          <Route exact path="/reset-password" component={ResetPassword} />
           <Route exact path="/posts" component={PostForm} />
           <Route exact path="/blog" component={Blog} />
         </Switch>
