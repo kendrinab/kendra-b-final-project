@@ -66,7 +66,7 @@ const Profile = ({ history: { push } }) => {
     }
   };
   return (
-    <>
+    <div className="profile-container">
       <Container className="d-flex justify-content-center align-items-center flex-column">
         <h1 className="mt-4">CLN +ALT Blog Profile Info</h1>
         <div className="mt-4">
@@ -109,7 +109,7 @@ const Profile = ({ history: { push } }) => {
           </Button>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 export default Profile;

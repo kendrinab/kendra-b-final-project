@@ -73,8 +73,10 @@ HOME
   flex-wrap: wrap;
   width: 400px;
   align-items: center;
-  padding-top: 500px;
+  padding-top: 800px;
+  padding-bottom: 100px;
   flex-direction: column;
+  float: center;
 }
 
 /*===================
@@ -108,7 +110,7 @@ LOGIN
 .login-container {
   background-image: url(./images/sidebackground.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: top right;
   background-size: auto;
 }
 
@@ -167,6 +169,24 @@ BLOG posts
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.blog-container {
+  background-image: url(./images/topsidebackground.png);
+  position: relative;
+  background-repeat: repeat-y;
+  background-position: top right;
+  background-size: 45%;
+}
+
+/*===================
+PROFILE
+====================*/
+.profile-container {
+  background-image: url(./images/topsidebackground.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 /*===================

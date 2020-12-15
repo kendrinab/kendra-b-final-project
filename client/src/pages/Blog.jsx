@@ -19,37 +19,39 @@ const Blog = () => {
   }, [id, setPosts]);
 
   return (
-    <div className="blog-title">
-      <div>
-        <section>
-          <BlogSlideshow />
-        </section>
-      </div>
-      <section className="the-latest">
-        <h1>News Flash</h1>
-      </section>
-      <div class="parent">
+    <div className="blog-container">
+      <div className="blog-title">
         <div>
-          {posts.map((post) => (
-            <li key={post._id}>
-              <span>
-                <h4 className="post-title">{post.title}</h4>
-              </span>
-              <img src={post.image} alt={post.title} />
-              {post.text}
-            </li>
-          ))}
+          <section>
+            <BlogSlideshow />
+          </section>
         </div>
-        <div>
-          {posts
-            .map((post) => (
+        <section className="the-latest">
+          <h1>News Flash</h1>
+        </section>
+        <div class="parent">
+          <div>
+            {posts.map((post) => (
               <li key={post._id}>
-                <h4 className="post-title">{post.title}</h4>
+                <span>
+                  <h4 className="post-title">{post.title}</h4>
+                </span>
                 <img src={post.image} alt={post.title} />
                 {post.text}
               </li>
-            ))
-            .reverse()}
+            ))}
+          </div>
+          <div>
+            {posts
+              .map((post) => (
+                <li key={post._id}>
+                  <h4 className="post-title">{post.title}</h4>
+                  <img src={post.image} alt={post.title} />
+                  {post.text}
+                </li>
+              ))
+              .reverse()}
+          </div>
         </div>
       </div>
     </div>
