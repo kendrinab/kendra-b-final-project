@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import Dropdown from '../components/Dropdown';
+import { Dropdown } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
+
 const Logout = () => {
   const { setCurrentUser } = useContext(AppContext);
   const history = useHistory();

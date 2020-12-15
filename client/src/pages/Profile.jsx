@@ -4,7 +4,8 @@ import Navigation from '../components/Navigation';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
-import Dropdown from '../components/Dropdown';
+import Dropdown from '../components/DropDown';
+
 const Profile = ({ history: { push } }) => {
   const { currentUser, setCurrentUser, setLoading } = useContext(AppContext);
   const [image, setImage] = useState(null);

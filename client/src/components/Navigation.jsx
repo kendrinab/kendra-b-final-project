@@ -1,16 +1,13 @@
 import React from 'react';
 import { Form, FormControl, Button, Navbar, Nav } from 'react-bootstrap';
-import '../images/Logo_7a6fea93.svg';
+import LogoImage from '../images/Logo_7a6fea93.png';
 
 const Navigation = () => {
   return (
     <div>
       <Navbar bg="light" variant="light">
         <Nav.Link href="/">
-          <img
-            src={require('../images/Logo.7a6fea93.svg')}
-            className="logo"
-          ></img>
+          <img src={LogoImage} className="logo"></img>
         </Nav.Link>
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>

@@ -41,13 +41,15 @@ const Blog = () => {
           ))}
         </div>
         <div>
-          {posts.map((post) => (
-            <li key={post._id}>
-              <h2 className="post-title">{post.title}</h2>
-              <img src={post.image} alt={post.title} />
-              {post.text}
-            </li>
-          ))}
+          {posts
+            .map((post) => (
+              <li key={post._id}>
+                <h2 className="post-title">{post.title}</h2>
+                <img src={post.image} alt={post.title} />
+                {post.text}
+              </li>
+            ))
+            .reverse()}
         </div>
       </div>
     </div>

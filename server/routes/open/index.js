@@ -6,7 +6,7 @@ const router = require('express').Router(),
     passwordRedirect
   } = require('../../controllers/users');
 
-router.post('/users', createUser);
+router.post('/', createUser);
 router.post('/login', loginUser);
 router.get('/password', requestPasswordReset);
 router.get('/password/:token', passwordRedirect);

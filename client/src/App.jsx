@@ -9,12 +9,14 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Blog from './pages/Blog';
 // import Footer from './components/Footer';
+import DropDown from './components/DropDown';
 
 function App() {
   return (
     <AppContextProvider>
       <BrowserRouter>
         <Navigation />
+        <DropDown />
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/" component={Home} />

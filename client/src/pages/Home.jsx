@@ -1,12 +1,13 @@
 import React from 'react';
+import WaveImage from '../images/wave.png';
 
 const Home = () => {
   return (
-    <div>
+    <div id="homepage">
       <h1>Welcome To CLN +ALT Blog</h1>
       <section>
         <div className="top-container">
-          <img src={require('../images/wave.png')} className="curved-photo" />
+          <img src={WaveImage} alt="" className="curved-photo" />
         </div>
       </section>
     </div>
