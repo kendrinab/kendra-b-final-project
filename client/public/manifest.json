@@ -1,13 +1,6 @@
 {
   "short_name": "CLN ALT Blog",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": " ",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "name": "CLN ALT Blog",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
