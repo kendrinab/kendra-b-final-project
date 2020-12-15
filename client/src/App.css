@@ -138,7 +138,11 @@ BLOG posts
   justify-content: space-around;
   padding: 10px;
 }
-
+.post-img {
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .the-latest {
   margin: auto;
   justify-content: space-around;
@@ -163,12 +167,9 @@ BLOG posts
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 42px;
   grid-row-gap: 3px;
-}
-
-.post-text {
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  text-align: justify;
 }
 
 .blog-container {
@@ -176,7 +177,7 @@ BLOG posts
   position: relative;
   background-repeat: repeat-y;
   background-position: top right;
-  background-size: 45%;
+  background-size: 40%;
 }
 
 /*===================

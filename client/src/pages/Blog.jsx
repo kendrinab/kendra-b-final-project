@@ -36,7 +36,9 @@ const Blog = () => {
                 <span>
                   <h4 className="post-title">{post.title}</h4>
                 </span>
-                <img src={post.image} alt={post.title} />
+                <div className="post-img">
+                  <img src={post.image} alt={post.title} />
+                </div>
                 {post.text}
               </li>
             ))}
@@ -46,7 +48,9 @@ const Blog = () => {
               .map((post) => (
                 <li key={post._id}>
                   <h4 className="post-title">{post.title}</h4>
-                  <img src={post.image} alt={post.title} />
+                  <div className="post-img">
+                    <img src={post.image} alt={post.title} />
+                  </div>
                   {post.text}
                 </li>
               ))
