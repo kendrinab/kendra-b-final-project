@@ -11,7 +11,7 @@ const Navigation = () => {
         </Nav.Link>
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/blog">Posts</Nav.Link>
+          <Nav.Link href="/blog">Blog</Nav.Link>
           {/* <Nav.Link href="#">About Us</Nav.Link> */}
         </Nav>
         <Form inline>
