@@ -6,6 +6,10 @@ const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const user = sessionStorage.getItem('user');
   const [currentUser, setCurrentUser] = useState('null');
+  const [posts, setPosts] = useState([]);
+  // const [currentFilter, setCurrentFilter] = useState([]);
+  // const [filteredPosts, setFilteredPosts] = useState([]);
+  // const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState('false');
 
   useEffect(() => {
@@ -25,7 +29,15 @@ const AppContextProvider = ({ children }) => {
         currentUser,
         setCurrentUser,
         loading,
-        setLoading
+        setLoading,
+        posts,
+        setPosts
+        // currentFilter,
+        // setCurrentFilter,
+        // filteredPosts,
+        // setFilteredPosts,
+        // search,
+        // setSearch
       }}
     >
       {children}

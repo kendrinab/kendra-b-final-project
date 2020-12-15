@@ -165,9 +165,22 @@ BLOG posts
 /*===================
 FOOTER
 ====================*/
-
 footer {
   background-image: url(./images/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  padding-top: 150px;
+}
+
+footer ul li {
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+
+footer ul a {
+  color: #b6aa93;
 }

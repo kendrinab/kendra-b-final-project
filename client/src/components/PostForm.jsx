@@ -28,29 +28,19 @@ const PostForm = () => {
   };
   return (
     <Container>
-      <Form onSubmit={handleTaskSubmission}>
+      <Form onSubmit={handlePostSubmission}>
         <Form.Group controlId="formBasicDescription">
-          <Form.Label>Description</Form.Label>
+          <Form.Label>Post Description</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter A New Post"
+            placeholder="Ready to Blog? Enter A New Post!"
             name="description"
             onChange={handleChange}
             required
           />
         </Form.Group>
-        <Form.Group controlId="formBasicDueDate">
-          <Form.Label>Due Date</Form.Label>
-          <Form.Control
-            type="date"
-            placeholder="Enter A New Post"
-            name="dueDate"
-            onChange={handleChange}
-            className="col-md-4"
-          />
-        </Form.Group>
         <Form.Group controlId="formBasicEmail">
-          <Button type="submit">Add Post</Button>
+          <Button type="submit">Looks Good? Add Post!</Button>
         </Form.Group>
       </Form>
     </Container>

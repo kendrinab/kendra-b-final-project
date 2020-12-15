@@ -4,6 +4,7 @@ import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
 import Dropdown from '../components/DropDown';
+// import PostForm from '../components/PostForm';
 
 const Profile = ({ history: { push } }) => {
   const { currentUser, setCurrentUser, setLoading } = useContext(AppContext);
@@ -27,7 +28,7 @@ const Profile = ({ history: { push } }) => {
         }
       });
       setCurrentUser({ ...currentUser, avatar: updatedUser.data.secure_url });
-      swal('Sweet!', 'Your image has been updated!', 'success');
+      swal('Looks Great!', 'Your image has been updated!', 'success');
     } catch (error) {
       swal('Error', 'Oops, something went wrong.');
     }
@@ -80,7 +81,6 @@ const Profile = ({ history: { push } }) => {
                 ? currentUser?.avatar
                 : '#'
             }
-            alt="profile-picture"
             width={250}
             height={250}
             roundedCircle

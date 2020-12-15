@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Twitter from '../images/twitter.svg';
+import Facebook from '../images/facebook.svg';
+import Instagram from '../images/instagram.svg';
 
 const Footer = () => {
   return (
@@ -11,21 +14,21 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={require('../images/facebook.svg')} alt="facebook" />
+            <img src={Facebook} alt="facebook" />
           </a>
           <a
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={require('../images/instagram.svg')} alt="instagram" />
+            <img src={Instagram} alt="instagram" />
           </a>
           <a
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={require('../images/twitter.svg')} alt="twitter" />
+            <img src={Twitter} alt="twitter" />
           </a>
         </div>
         <ul>
