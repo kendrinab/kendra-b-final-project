@@ -7,7 +7,12 @@ const Home = () => {
       <h1>CLN +ALT Blog</h1>
       <section>
         <div className="top-container">
-          <h1>Think Clean!</h1>
+          <h1>Think Cleaner!</h1>
+          <h6>
+            The mission here is to create a safer, and much more sustainable
+            personal care industry, to provide people helpful articles on
+            products they might not know is harming them.
+          </h6>
           <img src={WaveImage} alt="" className="curved-photo" />
         </div>
       </section>

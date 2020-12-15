@@ -4,7 +4,6 @@ import axios from 'axios';
 const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
-  const user = sessionStorage.getItem('user');
   const [currentUser, setCurrentUser] = useState('null');
   const [posts, setPosts] = useState([]);
   // const [currentFilter, setCurrentFilter] = useState([]);
@@ -12,12 +11,14 @@ const AppContextProvider = ({ children }) => {
   // const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState('false');
 
+  const user = sessionStorage.getItem('user');
   useEffect(() => {
     if (user && !currentUser) {
       axios
         .get(`api/users/me`, { withCredentials: true })
         .then(({ data }) => {
           setCurrentUser(data);
+          console.log(currentUser);
         })
         .catch((error) => console.log(error));
     }

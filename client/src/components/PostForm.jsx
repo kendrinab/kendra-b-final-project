@@ -20,6 +20,7 @@ const PostForm = () => {
         withCredentials: true,
         data: postData
       });
+      console.log(postData);
       setPostData(null);
       setLoading(false);
       form.reset();
@@ -28,14 +29,24 @@ const PostForm = () => {
     }
   };
   return (
-    <Container>
+    <Container className="add-post-desc">
       <Form onSubmit={handlePostSubmission}>
+        <Form.Group controlId="formBasicDescription">
+          <Form.Label>Title</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ready to Blog? Enter A Title!"
+            name="title"
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
         <Form.Group controlId="formBasicDescription">
           <Form.Label>Post Description</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ready to Blog? Enter A New Post!"
-            name="description"
+            name="text"
             onChange={handleChange}
             required
           />

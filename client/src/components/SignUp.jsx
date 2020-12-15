@@ -5,28 +5,29 @@ import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap';
 import swal from 'sweetalert';
 
-const SignUp = ({ history }) => {
+const Signup = ({ history }) => {
   const { setCurrentUser } = useContext(AppContext);
   const [formData, setFormData] = useState(null);
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSignUp = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api', formData);
+      const response = await axios.post('/api/users', formData);
       sessionStorage.setItem('user', response.data);
-      setCurrentUser(response.data.user);
+      setCurrentUser(response.data);
+      console.log(formData);
       history.push('/');
     } catch (error) {
-      swal('SignUp Error: ', error.toString());
+      swal('Signup Error: ', error.toString());
     }
   };
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
       <h1 className="mb-4">Happy Blogging!</h1>
-      <Form style={{ width: 300 }} onSubmit={handleSignUp}>
+      <Form style={{ width: 300 }} onSubmit={handleSignup}>
         <Form.Group>
           <Form.Label htmlFor="fullName">Name (First & Last)</Form.Label>
           <Form.Control
@@ -61,16 +62,14 @@ const SignUp = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <link>
-            <Button type="submit">Sign Up!</Button>
-          </link>
+          <Button type="submit">Sign Up!</Button>
         </Form.Group>
       </Form>
-      <Link className="mt-4" to="/signup">
+      <Link className="mt-4" to="/login">
         Already have a blogging account? Login Here!
       </Link>
     </Container>
   );
 };
 
-export default SignUp;
+export default Signup;

@@ -49,7 +49,6 @@ HOME
   position: absolute;
   padding-top: 150px;
 }
-
 .curved-photo {
   position: absolute;
   bottom: 0;
@@ -103,9 +102,9 @@ LOGIN
   border-color: black;
 }
 
-/* .mt-4 {
-  color: #000;
-} */
+.mt-4 {
+  color: rgb(83, 77, 66);
+}
 
 .login-container {
   background-image: url(./images/sidebackground.png);
@@ -138,11 +137,13 @@ BLOG posts
   justify-content: space-around;
   padding: 10px;
 }
+
 .post-img {
   margin: auto;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .the-latest {
   margin: auto;
   justify-content: space-around;

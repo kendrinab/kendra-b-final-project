@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Login from './components/Login';
 import Profile from './pages/Profile';
-import SignUp from './components/SignUp';
+import Signup from './components/Signup';
 import Blog from './pages/Blog';
 import PostForm from './components/PostForm';
 import Footer from './components/Footer';
@@ -26,7 +26,7 @@ function App() {
           <PrivateRoute exact path="/profile" component={Profile} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/signup" component={Signup} />
           <Route exact path="/update-password" component={UpdatePassword} />
           <Route exact path="/reset-password" component={ResetPassword} />
           <Route exact path="/posts" component={PostForm} />

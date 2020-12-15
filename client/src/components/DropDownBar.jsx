@@ -9,7 +9,7 @@ const DropDownBar = () => {
   const { currentUser } = useContext(AppContext);
   console.log(currentUser);
   return (
-    <>
+    <div>
       {currentUser._id && (
         <Navbar>
           <Nav.Item>
@@ -40,7 +40,7 @@ const DropDownBar = () => {
           </Nav.Item>
         </Navbar>
       )}
-    </>
+    </div>
   );
 };
 
