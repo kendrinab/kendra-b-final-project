@@ -12,7 +12,7 @@ const Navigation = () => {
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/blog">Posts</Nav.Link>
-          <Nav.Link href="#">About Us</Nav.Link>
+          {/* <Nav.Link href="#">About Us</Nav.Link> */}
         </Nav>
         <Form inline>
           <FormControl

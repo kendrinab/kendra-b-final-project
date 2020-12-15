@@ -14,6 +14,16 @@ ALL
   font-family: 'Poppins', sans-serif;
 }
 
+#root {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 250px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
 h3,
 h6 {
   font-size: 1rem;
@@ -23,15 +33,22 @@ li {
   list-style-type: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 /*===================
 HOME
 ====================*/
 .top-container {
-  /* background-image: url(./images/homebackground.png); */
+  background-image: url(./images/homebackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.curved-photo {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
 }
 
 /*===================
@@ -61,6 +78,13 @@ LOGIN
 /*===================
 BLOG slideshow
 ====================*/
+.react-slideshow-container {
+  height: 400px;
+  width: 800px;
+  margin: auto;
+  padding-top: 60px;
+}
+
 .zoom-wrapper {
   height: 400px;
   width: 800px;

@@ -23,3 +23,5 @@ const Logout = () => {
   };
   return <Dropdown.Item onClick={handleSignOut}>Logout</Dropdown.Item>;
 };
+
+export default Logout;
