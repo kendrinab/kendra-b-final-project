@@ -18,7 +18,7 @@ const Login = ({ history }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/login', formData);
+      const response = await axios.post('/api/users', formData);
       setCurrentUser(response.data);
       sessionStorage.setItem('user', response.data);
       history.push('/');
@@ -28,7 +28,7 @@ const Login = ({ history }) => {
   };
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">Welcome Back, Travel Guider!</h1>
+      <h1 className="mb-4">Welcome Back, CLN +Alter!</h1>
       <Form style={{ width: 300 }} onSubmit={handleLogin}>
         <Form.Group>
           <Form.Label htmlFor="email">Email Address</Form.Label>

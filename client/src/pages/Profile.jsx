@@ -4,6 +4,8 @@ import Navigation from '../components/Navigation';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
+import Dropdown from '../components/DropDown';
+
 const Profile = ({ history: { push } }) => {
   const { currentUser, setCurrentUser, setLoading } = useContext(AppContext);
   const [image, setImage] = useState(null);
@@ -68,6 +70,7 @@ const Profile = ({ history: { push } }) => {
   return (
     <>
       <Navigation />
+      <Dropdown />
       <Container className="d-flex justify-content-center align-items-center flex-column">
         <h1 className="mt-4">Your Profile</h1>
         <div className="mt-4">

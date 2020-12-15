@@ -26,7 +26,7 @@ const Blog = () => {
         </section>
       </div>
       <section className="the-latest">
-        <h6>Where's the Best Place to Travel to in December</h6>
+        <h6>News Flash</h6>
       </section>
       <div class="parent">
         <div>
@@ -41,13 +41,15 @@ const Blog = () => {
           ))}
         </div>
         <div>
-          {posts.map((post) => (
-            <li key={post._id}>
-              <h2 className="post-title">{post.title}</h2>
-              <img src={post.image} alt={post.title} />
-              {post.text}
-            </li>
-          ))}
+          {posts
+            .map((post) => (
+              <li key={post._id}>
+                <h2 className="post-title">{post.title}</h2>
+                <img src={post.image} alt={post.title} />
+                {post.text}
+              </li>
+            ))
+            .reverse()}
         </div>
       </div>
     </div>

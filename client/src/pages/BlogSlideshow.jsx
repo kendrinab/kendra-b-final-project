@@ -1,11 +1,12 @@
 import React from 'react';
 import { Zoom } from 'react-slideshow-image';
-import image from '../images/travel.jpg';
-import secondImage from '../images/waterview.jpg';
+import image from '../images/anastasia.jpg';
+import secondImage from '../images/cream.jpg';
+import thirdImage from '../images/bee-natural.jpg';
 import 'react-slideshow-image/dist/styles.css';
 
 const BlogSlideshow = () => {
-  const images = [image, secondImage];
+  const images = [image, secondImage, thirdImage];
   const zoomInProperties = {
     indicators: true,
     scale: 1.4

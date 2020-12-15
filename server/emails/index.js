@@ -4,13 +4,15 @@ const sgMail = require('@sendgrid/mail'),
 sgMail.setApiKey(SENGRID_API_KEY);
 
 (exports.sendWelcomeEmail = (email, name) => {
-  sgMail.send({
-    to: email,
-    from: `${process.env.FROM_EMAIL}`,
-    subject:
-      'Thank you for signing up! Please check email for your confirmation.',
-    text: `Hi ${name}! Welcome to your Blog account.`
-  });
+  sgMail
+    .send({
+      to: email,
+      from: `${process.env.FROM_EMAIL}`,
+      subject:
+        'Thank you for signing up! Please check email for your confirmation.',
+      text: `Hi ${name}! Welcome to your Blog account.`
+    })
+    .catch((error) => console.log(error.response.body.errors));
 }),
   (exports.sendCancellationEmail = (email, name) => {
     sgMail.send({

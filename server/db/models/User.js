@@ -84,7 +84,7 @@ userSchema.methods.generateAuthToken = async function () {
       expiresIn: '24h'
     }
   );
-  user.tokens = user.token.concat({
+  user.tokens = user.tokens.concat({
     token
   });
   await user.save();
