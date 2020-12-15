@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Profile from './pages/Profile';
 import SignUp from './components/SignUp';
 import Blog from './pages/Blog';
+import PostForm from './components/PostForm';
 import Footer from './components/Footer';
 import DropDownBar from './components/DropDownBar';
 
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/posts" component={PostForm} />
           <Route exact path="/blog" component={Blog} />
         </Switch>
         <Footer />

@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
+
 const PostForm = () => {
   const [postData, setPostData] = useState(null);
   const { setLoading } = useContext(AppContext);
@@ -40,7 +41,7 @@ const PostForm = () => {
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
-          <Button type="submit">Looks Good? Add Post!</Button>
+          <Button type="submit">Add Post!</Button>
         </Form.Group>
       </Form>
     </Container>

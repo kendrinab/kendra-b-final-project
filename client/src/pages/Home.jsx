@@ -4,7 +4,7 @@ import WaveImage from '../images/wave.png';
 const Home = () => {
   return (
     <div id="homepage">
-      <h1>Welcome to CLN +ALT Blog</h1>
+      <h1>CLN +ALT Blog</h1>
       <section>
         <div className="top-container">
           <h1>Think Clean!</h1>

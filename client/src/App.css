@@ -175,6 +175,20 @@ footer {
   padding-top: 150px;
 }
 
+footer .middle {
+  display: flex;
+  align-items: center;
+}
+
+footer .social-media {
+  border-right: 3px;
+  width: 20%;
+}
+
+footer .social-media a {
+  margin-right: 2vw;
+}
+
 footer ul li {
   width: 100%;
   padding: 10px;
