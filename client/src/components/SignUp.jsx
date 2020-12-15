@@ -18,7 +18,6 @@ const Signup = ({ history }) => {
       const response = await axios.post('/api/users', formData);
       sessionStorage.setItem('user', response.data);
       setCurrentUser(response.data);
-      console.log(formData);
       history.push('/');
     } catch (error) {
       swal('Signup Error: ', error.toString());
