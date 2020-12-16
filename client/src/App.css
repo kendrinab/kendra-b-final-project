@@ -76,10 +76,6 @@ HOME
 }
 
 .p1 {
-  /* background-image: url(./images/sidebackground.png);
-  background-repeat: repeat-y;
-  background-size: 50%;
-  background-position: bottom right; */
   height: 700px;
   top: 700px;
   flex-wrap: wrap;
@@ -109,6 +105,12 @@ div .bg-dark {
 }
 
 /*===================
+SEARCH
+====================*/
+.search-bar {
+}
+
+/*===================
 LOGIN 
 ====================*/
 .btn-primary {
@@ -124,9 +126,37 @@ LOGIN
   background-image: url(./images/sidebackground.png);
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: auto;
+  background-size: 40%;
+  padding: 0;
 }
 
+.top-signup {
+  background-image: url(./images/sidebackground.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45%;
+}
+/*===================
+RESET PASSWORD
+====================*/
+.resetp-container {
+  background-image: url(./images/sidebackground.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45%;
+  padding: 0;
+}
+
+/*===================
+UPDATE PASSWORD
+====================*/
+.updatep-container {
+  background-image: url(./images/sidebackground.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45%;
+  padding: 0;
+}
 /*===================
 BLOG slideshow
 ====================*/
@@ -192,7 +222,8 @@ BLOG posts
   position: relative;
   background-repeat: repeat-y;
   background-position: top right;
-  background-size: 40%;
+  background-size: 35%;
+  height: 11390px;
 }
 
 /*===================

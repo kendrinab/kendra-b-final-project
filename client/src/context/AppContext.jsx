@@ -8,7 +8,7 @@ const AppContextProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   // const [currentFilter, setCurrentFilter] = useState([]);
   // const [filteredPosts, setFilteredPosts] = useState([]);
-  // const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState('false');
 
   const user = sessionStorage.getItem('user');
@@ -32,13 +32,13 @@ const AppContextProvider = ({ children }) => {
         loading,
         setLoading,
         posts,
-        setPosts
+        setPosts,
         // currentFilter,
         // setCurrentFilter,
         // filteredPosts,
         // setFilteredPosts,
-        // search,
-        // setSearch
+        search,
+        setSearch
       }}
     >
       {children}

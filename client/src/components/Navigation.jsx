@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, FormControl, Button, Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import LogoImage from '../images/Logo_7a6fea93.png';
+import Search from './Search.jsx';
 
 const Navigation = () => {
   return (
@@ -11,19 +12,13 @@ const Navigation = () => {
         </Nav.Link>
         <Nav className="mr-auto">
           <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/blog">Blog</Nav.Link>
-          {/* <Nav.Link href="#">About Us</Nav.Link> */}
+          <Search />
         </Nav>
-        <Form inline>
-          <FormControl
-            type="text"
-            placeholder="Search for a post!"
-            className="mr-sm-2"
-          />
-          <Button variant="outline-info">Search</Button>
-        </Form>
       </Navbar>
     </div>
   );
 };
+
 export default Navigation;

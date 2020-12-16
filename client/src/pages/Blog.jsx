@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BlogSlideshow from '../pages/BlogSlideshow';
+import PostForm from '../components/PostForm';
 
 const Blog = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ const Blog = () => {
       <div className="blog-title">
         <div>
           <section>
+            <PostForm />
             <BlogSlideshow />
           </section>
         </div>
