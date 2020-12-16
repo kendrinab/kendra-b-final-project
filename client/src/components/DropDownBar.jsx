@@ -3,7 +3,6 @@ import { Nav, Dropdown, Image, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import Logout from './LogOut';
-// import PostForm from './PostForm';
 
 const DropDownBar = () => {
   const { currentUser } = useContext(AppContext);
@@ -30,10 +29,15 @@ const DropDownBar = () => {
                 <Dropdown.Item as={Link} to="/profile">
                   Profile
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/posts">
+                <Dropdown.Item as={Link} to="/blog">
                   Create A Post!
                 </Dropdown.Item>
-                {/* <PostForm /> */}
+                <Dropdown.Item as={Link} to="/reset-password">
+                  Reset Password
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/update-password">
+                  Update Password
+                </Dropdown.Item>
                 <Logout />
               </Dropdown.Menu>
             </Dropdown>

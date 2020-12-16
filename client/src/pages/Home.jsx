@@ -8,11 +8,12 @@ const Home = () => {
       <section>
         <div className="top-container">
           <h1>Think Clean!</h1>
-          <h5 className="top-home-h6">
+          <p className="top-home-h6">
             Our Mission is to create a safer, and much more sustainable personal
             care industry, to provide people helpful articles on products they
             might not know is harming them.
-          </h5>
+          </p>
+          <p>- The CLN +ALT Team</p>
           <img src={WaveImage} alt="" className="curved-photo" />
         </div>
       </section>

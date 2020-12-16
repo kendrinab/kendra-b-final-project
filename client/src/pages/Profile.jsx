@@ -90,6 +90,8 @@ const Profile = ({ history: { push } }) => {
               Save Image
             </Button>
           </form>
+
+          <Button type="submit" size="sm" className="mt-4"></Button>
         </div>
         <div className="d-flex flex-column align-items-center justify-content-center mt-4">
           <div className="d-flex ">
