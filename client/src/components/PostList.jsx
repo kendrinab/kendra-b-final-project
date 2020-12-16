@@ -16,10 +16,10 @@ const PostList = () => {
   } = useContext(AppContext);
   useEffect(() => {
     axios
-      .get('/api/posts?sortBy=dueDate:asc', { withCredentials: true })
+      .get('/api/posts?sortBy=dateCreated:asc', { withCredentials: true })
       .then((response) => {
-        setTasks(response.data);
-        setFilteredTasks(response.data);
+        setPosts(response.data);
+        setFilteredPosts(response.data);
       })
       .catch((error) => {
         swal(`Oops!`, 'Something went wrong.');

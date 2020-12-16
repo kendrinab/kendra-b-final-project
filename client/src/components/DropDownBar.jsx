@@ -29,10 +29,13 @@ const DropDownBar = () => {
                 <Dropdown.Item as={Link} to="/profile">
                   Profile
                 </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/posts-page">
+                  View All Posts
+                </Dropdown.Item>
                 <Dropdown.Item as={Link} to="/blog">
                   Create A Post
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/posts/${currentPost._id}">
+                <Dropdown.Item as={Link} to="/posts/$:id">
                   Update A Post
                 </Dropdown.Item>
                 <Dropdown.Item as={Link} to="/reset-password">

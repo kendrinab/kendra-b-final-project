@@ -40,6 +40,10 @@ img {
 /*===================
 HOME
 ====================*/
+.think-clean-header {
+  font-weight: bold;
+  padding-left: 20px;
+}
 .top-container {
   background-image: url(./images/homebackground.png);
   background-repeat: no-repeat;
@@ -47,14 +51,13 @@ HOME
   height: 500px;
   width: 200vw;
   position: absolute;
-  padding-top: 150px;
+  padding-top: 130px;
 }
-
 .curved-photo {
   position: absolute;
   bottom: 0;
   width: 200vw;
-  height: 100px;
+  height: 90px;
 }
 
 .home-info {
@@ -64,30 +67,63 @@ HOME
   background-position: bottom right;
   flex-direction: column;
   padding-top: 400px;
+  padding-left: 40px;
 }
 
 .top-home-h6 {
   display: flex;
-  padding: 10px;
-  padding-top: 40px;
-  width: 800px;
+  padding: 5px;
+  padding-top: 20px;
+  width: 400px;
   justify-content: space-between;
   text-align: justify;
+  padding-left: 30px;
 }
-
+.cln-alt-team {
+  padding-left: 30px;
+}
+.signup-button {
+  padding-right: 380px;
+  padding-left: 20px;
+  font-weight: bolder;
+}
+.cln-alt-title {
+  padding-top: 100px;
+  align-items: center;
+  font-weight: bolder;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
 .p1 {
-  height: 700px;
+  /* height: 00px; */
   top: 700px;
   flex-wrap: wrap;
-  width: 600px;
-  padding-left: 40px;
-  padding-top: 200px;
-  padding-bottom: 100px;
+  width: 550px;
+  padding-left: 50px;
+  padding-top: 70px;
   flex-direction: column;
   float: center;
-  text-align: justify;
+  text-align: center;
+  padding-bottom: 40px;
+  font-weight: bold;
 }
 
+.add-post-img {
+  width: 600px;
+  height: 250px;
+  align-items: center;
+  margin: auto;
+  padding-left: 50px;
+}
+
+.add-blog-img {
+  width: 600px;
+  height: 250px;
+  padding-top: 10px;
+  align-items: center;
+  margin: auto;
+  padding-left: 50px;
+}
 /*===================
 NAVIGATION
 ====================*/
@@ -108,6 +144,9 @@ div .bg-dark {
 SEARCH
 ====================*/
 .search-bar {
+  padding-left: 300px;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /*===================
@@ -225,6 +264,9 @@ BLOG posts
   background-size: 35%;
   height: 11390px;
 }
+/*===================
+UPDATE POSTS
+====================*/
 
 /*===================
 PROFILE
