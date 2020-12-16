@@ -30,7 +30,10 @@ const DropDownBar = () => {
                   Profile
                 </Dropdown.Item>
                 <Dropdown.Item as={Link} to="/blog">
-                  Create A Post!
+                  Create A Post
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/posts/${currentPost._id}">
+                  Update A Post
                 </Dropdown.Item>
                 <Dropdown.Item as={Link} to="/reset-password">
                   Reset Password

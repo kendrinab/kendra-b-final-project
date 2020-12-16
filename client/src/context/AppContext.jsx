@@ -7,7 +7,7 @@ const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState('null');
   const [posts, setPosts] = useState([]);
   // const [currentFilter, setCurrentFilter] = useState([]);
-  // const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
   const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState('false');
 
@@ -35,8 +35,8 @@ const AppContextProvider = ({ children }) => {
         setPosts,
         // currentFilter,
         // setCurrentFilter,
-        // filteredPosts,
-        // setFilteredPosts,
+        filteredPosts,
+        setFilteredPosts,
         search,
         setSearch
       }}

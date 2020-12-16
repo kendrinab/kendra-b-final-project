@@ -33,7 +33,6 @@ const PostList = () => {
           <tr>
             <th>Description</th>
             <th>Date</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>

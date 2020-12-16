@@ -21,7 +21,7 @@ const Login = ({ history }) => {
       const response = await axios.post('/api/users/login', formData);
       setCurrentUser(response.data);
       sessionStorage.setItem('user', response.data);
-      history.push('/');
+      history.push('/home');
     } catch (error) {
       swal(`Oh no!`, 'Looks Like Something Went Wrong');
     }

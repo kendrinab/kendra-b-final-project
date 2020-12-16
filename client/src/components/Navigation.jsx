@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <div>
       <Navbar bg="light" variant="light">
-        <Nav.Link href="/">
+        <Nav.Link href="/home">
           <img src={LogoImage} className="logo"></img>
         </Nav.Link>
         <Nav className="mr-auto">

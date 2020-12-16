@@ -51,6 +51,17 @@ const PostForm = () => {
             required
           />
         </Form.Group>
+        <Form.Group controlId="formBasicDescription">
+          <Form.Label>Date Added</Form.Label>
+          <Form.Control
+            type="date"
+            placeholder="Enter a date"
+            name="dateAdded"
+            onChange={handleChange}
+            required
+            className="col-md-4"
+          />
+        </Form.Group>
         <Form.Group controlId="formBasicEmail">
           <Button type="submit">Add Post!</Button>
         </Form.Group>

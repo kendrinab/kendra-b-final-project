@@ -18,6 +18,7 @@
     "express-fileupload": "^1.2.0",
     "faker": "^5.1.0",
     "hash": "^0.2.1",
+    "history": "^5.0.0",
     "install": "^0.13.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
