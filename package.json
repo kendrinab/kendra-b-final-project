@@ -20,7 +20,7 @@
     "hash": "^0.2.1",
     "history": "^5.0.0",
     "install": "^0.13.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "moment": "^2.29.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.7",
